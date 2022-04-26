@@ -28,6 +28,11 @@ spring:
         predicates:
         - Path=/auth/**
  
+      - id: user-service
+        uri: lb://USER-SERVICE
+        predicates:
+        - Path=/users/**
+         
       default-filters:
         - Authentication 
         
