@@ -1,4 +1,4 @@
-# Spring-Microservices-WebFlux-Eureka
+# Modern microservices-based architecture with Spring Boot and Spring Cloud
 
 A simple microservices-based application that uses the reactive stack of Spring Boot together with the Eureka services provided by Spring Cloud. 
 
