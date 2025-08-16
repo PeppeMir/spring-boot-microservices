@@ -1,6 +1,6 @@
 package com.example.microservices.userservice.model.dto;
 
-import javax.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotBlank;
 
 public class UserDto {
 	private String id;
