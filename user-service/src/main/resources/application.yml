@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: user-service
+
+  profiles:
+    active: ${PROFILE:dev}
+
+  config:
+    import: configserver:${CONFIG_SERVICE_URL:http://localhost:8888}
+
+
+
+
+

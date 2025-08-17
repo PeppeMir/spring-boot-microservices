@@ -1,0 +1,12 @@
+spring:
+    application:
+      name: config-service
+
+    cloud:
+      config:
+        server:
+          git:
+            uri: file:////C:\\Users\\giuse\\Desktop\\Dev\\spring-boot-microservices\\config-service\\src\\main\\resources\\local-git-repo
+            default-label: master
+server:
+  port: 8888
