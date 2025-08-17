@@ -12,29 +12,31 @@ spring:
     
   cloud:
     gateway:
-      routes:
-      - id: gallery-service
-        uri: lb://GALLERY-SERVICE
-        predicates:
-        - Path=/galleries/**
-        
-      - id: image-service
-        uri: lb://IMAGE-SERVICE
-        predicates:
-        - Path=/images/**
-        
-      - id: auth-service
-        uri: lb://AUTH-SERVICE
-        predicates:
-        - Path=/auth/**
- 
-      - id: user-service
-        uri: lb://USER-SERVICE
-        predicates:
-        - Path=/users/**
-         
-      default-filters:
-        - Authentication 
+      server:
+        webflux:
+          routes:
+          - id: gallery-service
+            uri: lb://GALLERY-SERVICE
+            predicates:
+            - Path=/galleries/**
+
+          - id: image-service
+            uri: lb://IMAGE-SERVICE
+            predicates:
+            - Path=/images/**
+
+          - id: auth-service
+            uri: lb://AUTH-SERVICE
+            predicates:
+            - Path=/auth/**
+
+          - id: user-service
+            uri: lb://USER-SERVICE
+            predicates:
+            - Path=/users/**
+
+          default-filters:
+            - Authentication
         
 jwt:
-   secret: ZXhhbXBsZS1zZWNyZXQ=
+   secret: fRtN+gqw19bm1u/TXmWBEnr8DshGX0LUPRZzUgu1Xoyl298ekkmNOUIcifx1yMT18HzHwtp8LwqiCNR5OyF+BA==
